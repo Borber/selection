@@ -6,7 +6,7 @@ repository = "https://github.com/Borber/selection"
 keywords = ["selection", "linux", "windows", "macos"]
 categories = ["gui"]
 license = "GPL-3.0-only"
-version = "1.2.1"
+version = "1.2.2"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
