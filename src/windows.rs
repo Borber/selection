@@ -110,9 +110,11 @@ fn copy() -> Result<bool, Box<dyn Error>> {
     let num_before = unsafe { GetClipboardSequenceNumber() };
     simulate(&EventType::KeyPress(Key::ControlRight))?;
     simulate(&EventType::KeyPress(Key::KeyC))?;
-    simulate(&EventType::KeyRelease(Key::ControlRight))?;
+    std::thread::sleep(std::time::Duration::from_millis(10));
     simulate(&EventType::KeyRelease(Key::KeyC))?;
-    std::thread::sleep(std::time::Duration::from_millis(20));
+    std::thread::sleep(std::time::Duration::from_millis(10));
+    simulate(&EventType::KeyRelease(Key::ControlRight))?;
+    std::thread::sleep(std::time::Duration::from_millis(10));
     let num_after = unsafe { GetClipboardSequenceNumber() };
     Ok(num_after != num_before)
 }
