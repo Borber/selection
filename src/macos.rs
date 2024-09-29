@@ -1,5 +1,5 @@
-use accessibility_ng::{AXAttribute, AXUIElement};
-use accessibility_sys_ng::{kAXFocusedUIElementAttribute, kAXSelectedTextAttribute};
+use accessibility::{AXAttribute, AXUIElement};
+use accessibility_sys::{kAXFocusedUIElementAttribute, kAXSelectedTextAttribute};
 use core_foundation::string::CFString;
 use log::{error, info};
 use std::error::Error;
